@@ -1,0 +1,172 @@
+
+*{
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+.marquee {
+  display: flex;
+  gap: 7rem; /* space between texts */
+  animation: scroll 15s linear infinite;
+  min-width: max-content; /* prevents items from wrapping */
+}
+
+.end {
+  position: relative;
+  overflow: hidden;
+}
+/* ✅ Prevent transforms from making elements wider than screen */
+section, div, nav {
+  max-width: 100vw;
+  box-sizing: border-box;
+}
+body{
+  height:100%;
+  width: 100%;
+}
+.white-overlay {
+  filter: opacity(0.6) drop-shadow(0 0 0 rgb(207, 206, 206));
+}
+
+.section-last h1{
+  background-image: url(images/bg-last.png);
+  background-size: cover;
+  background-clip: text;
+  color:transparent;
+}
+.bloom{
+  position: absolute;
+  bottom:-575%;
+  filter: blur(50px);
+  opacity: 0.8;
+
+}
+.gradient-animation{
+  background: linear-gradient(
+  90deg,
+  #fff2b8, /* very light */
+  #ffdfa0,
+  #ffcc80,
+  #ffc000, /* base color */
+  #e6a800,
+  #cc9500,
+  rgb(214, 95, 21)  /* darker */
+); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background-size: 200%;
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+animation: animate-gradient 2.5s linear infinite;
+} 
+@keyframes animate-gradient{
+  to{
+    background-position: 200%;
+  }
+}
+/* Tablet Responsiveness (768px – 1024px) */
+@media (max-width: 1024px) and (min-width: 768px) {
+
+  /* Navbar */
+  nav {
+    gap: 2rem !important;
+    padding: 0 2rem !important;
+  }
+  nav .right {
+    gap: 2rem !important;
+    font-size: 16px !important;
+  }
+  nav img {
+    width: 120px !important;
+  }
+
+  /* Hero Section */
+  .first h1 {
+    font-size: 55px !important;
+    line-height: 60px !important;
+  }
+  .second {
+    left: 20% !important;
+    width: 60% !important;
+    font-size: 16px !important;
+  }
+  .third {
+    right: 10% !important;
+    font-size: 40px !important;
+  }
+  .four img {
+    width: 200px !important;
+  }
+
+  /* Section 2 (About) */
+  .welcome {
+    font-size: 36px !important;
+    left: 10% !important;
+  }
+  .about-image {
+    width: 320px !important;
+    height: 400px !important;
+    left: 10% !important;
+  }
+  .about {
+    left: 55% !important;
+    top: 280px !important;
+    width: 40% !important;
+  }
+  .explore-btn {
+    width: 140px !important;
+    height: 140px !important;
+    top: 480px !important;
+  }
+
+  /* Section 3 (Services) */
+  .msg-left {
+    font-size: 36px !important;
+  }
+  .right-msg {
+    width: 400px !important;
+    font-size: 18px !important;
+  }
+  .mini-container {
+    width: 70% !important;
+    right: 5% !important;
+  }
+
+  /* Section 4 (Why Choose Us) */
+  .page1-text {
+    font-size: 90px !important;
+    line-height: 100px !important;
+  }
+  .page2 .left1 h1 {
+    font-size: 42px !important;
+  }
+  .page2 .circle {
+    width: 120px !important;
+    height: 120px !important;
+    font-size: 32px !important;
+  }
+  .page3 .left3 h1 {
+    font-size: 55px !important;
+  }
+  .page3 .right3 {
+    width: 420px !important;
+    height: 420px !important;
+  }
+  .page4 h1 {
+    font-size: 70px !important;
+    width: 90% !important;
+  }
+
+  /* Last Section */
+  .bloom, .lastsection {
+    font-size: 90px !important;
+  }
+  .lastsection span {
+    font-size: 80px !important;
+  }
+  .copyright h1 {
+    font-size: 18px !important;
+  }
+}
