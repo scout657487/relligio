@@ -329,7 +329,6 @@ gsap.from(".contact-last",{
     scrollTrigger: {
     trigger: ".section-last",
     scroller:"body",
-    markers:true,
     start: "top 60%",
     end:"top 40%",
     scrub:2
