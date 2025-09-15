@@ -321,4 +321,18 @@ gsap.from(".char", {
     toggleActions: "play none none reverse"
   }
 });
+gsap.from(".contact-last",{
+  x:400,
+  opacity:0,
+  duration:2,
+  ease:"power3.out",
+    scrollTrigger: {
+    trigger: ".section-last",
+    scroller:"body",
+    markers:true,
+    start: "top 60%",
+    end:"top 40%",
+    scrub:2
+  }
+})
 
