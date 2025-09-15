@@ -79,6 +79,7 @@ gsap.from(".third",{
 let navs = document.querySelectorAll(".nav");
 navs.forEach((nav)=> {
   nav.addEventListener("mouseenter",(dets)=> {
+    dets.target.classList.add("tooltip")
     gsap.to(dets.target,{
       scale:1.2,
       duration:1,
@@ -307,17 +308,17 @@ gsap.from(".page1-text",{
   }
 })
 gsap.from(".char", {
-  y: 400,
+  y: 800,
   opacity: 0,
   scale: 0,
   duration: 1.2,
   ease: "power4.out",
+  transformPerspective: 1000, // helps with scale/transform
   stagger: { from: "random", amount: 1 },
   scrollTrigger: {
     trigger: ".section-last",
-    start: "top 80%",
+    start: "top 90%",
     toggleActions: "play none none reverse"
   }
 });
-
 

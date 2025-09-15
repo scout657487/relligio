@@ -1,4 +1,3 @@
-
 *{
   margin: 0;
   padding: 0;
@@ -31,15 +30,17 @@ body{
   filter: opacity(0.6) drop-shadow(0 0 0 rgb(207, 206, 206));
 }
 
+
 .section-last h1{
-  background-image: url(images/bg-last.png);
+  font-family: 'Roboto', sans-serif;
+  background-image: url(images/bg-last3.jpg);
   background-size: cover;
   background-clip: text;
   color:transparent;
 }
 .bloom{
   position: absolute;
-  bottom:-575%;
+  bottom:35%;
   filter: blur(50px);
   opacity: 0.8;
 
